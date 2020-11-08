@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [[ -z "$1" ]]; then
+    echo "Must supply timeframe in format YYYY-MM"
+    exit 1
+fi
+
+DATE=$1
+echo $DATE
+
+mkdir -p parsed/
+
+# hacky way of checking for filtered flag
+if [[ "$2" == "--filtered" ]]; then
+    echo "Running script on prefetched neg comments"
+    time cat ./parsed/neg_children_comments_${DATE}.tsv ./parsed/neg_parent_comments_${DATE}.tsv | python get_non_condolence.py $DATE --filtered
+else
+    time bzcat /shared-1/datasets/reddit-dump-all/RC/RC_${DATE}.bz2 |\
+         jq -r '[.link_id,.parent_id,.id,.permalink,.body,.gilded,.controversiality,.score,.author,.subreddit] | @tsv' |\
+         python get_non_condolence.py $DATE
+fi
