@@ -13,6 +13,12 @@ li {
   line-height: 1.7;
 }
 
+img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
 h1 {
   font-size: 2rem;
   width: 100%;
@@ -37,4 +43,5 @@ article {
 
 pre {
   font-family: ui-monospace, monospace;
+  overflow-x: scroll;
 }
