@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Condolence and Empathy in Online Communities</title>
+        <link rel="stylesheet" href="styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+        <article>
+        <h1>Condolence and Empathy in Online Communities</h1>
+        <div class="byline">Naitian Zhou and David Jurgens</div>
+        <section>
+            <h2>Introduction</h2>
+            <blockquote class="intro">I'm so sorry... I don't know what to say.</blockquote>
+            <p>
+            In times of distress, we frequently go online to seek social
+            support and condolence. But effectively providing that support to
+            others is easier said than done.
+            This study aims to computationally identify mechanisms and
+            strategies for delivering effective and impactful condolence on
+            social media.
+            </p>
+            <p>
+            We offer the following three contributions.
+            <ol>
+                <li>
+                We introduce a <b>new massive dataset</b> of 11.4M public
+                expressions of distress and 2.8M of condolence labeled using
+                two deep learning models.
+                </li>
+                <li>
+                Using an analysis of 11.4M expressions of distress, we
+                demonstrate that the <b>community selectively engages in
+                condolence</b>.
+                </li>
+                <li>
+                We introduce a new dataset and model for <b>identifying empathy
+                in condolences</b> and, using the empathy estimates, find
+                that distressed individuals less frequently offer gratitude for
+                deeply empathetic condolences and instead prefer compassionate,
+                positive messages.
+                </li>
+            </ol>
+            </p>
+        </section>
+        <section>
+            <h2>Code and Models</h2>
+            <p>
+            Data is available to researchers by email request. Code and models
+            are available <a
+                href="https://github.com/naitian/Condolence-Empathy-Online-Communities">here</a>.
+            </p>
+            <p>
+            Pre-trained BERT-based classifiers for condolence and distress speech, as well
+            as a RoBERTa-based model for empathy are available as a <a
+                href="https://pypi.org/project/condolence-models/">pip
+                package</a>. The code is available on <a
+                href="https://github.com/naitian/condolence-models">Github</a>.
+            <pre>
+            pip install condolence-models
+            </pre>
+            </p>
+        </section>
+        <section>
+            <h2>Highlights</h2>
+
+            <h3>Condolences have a sympathy sandwich.</h3>
+            <p>
+            If we look at topic distributions across sentences of a condolence,
+            the first and last sentences are likelier to be sympathetic, while
+            the middle is likelier to be advice or personal experience.
+            </p>
+
+            <h3>Some types of empathy work better online than others.</h3>
+            <p>
+            Our appraisal-based empathy is negatively correlated with a good
+            condolence, but a different measure of empathy which mixes in the
+            concept of compassion is positively correlated.
+            </p>
+
+            <h3>Either way, refrain from trite sympathy or advice-giving.</h3>
+            <p>
+            Phrases like "sorry for your loss" or "thoughts and prayers" do not
+            a good condolence make. Neither does advice giving.
+            </p>
+
+            <h3>Try lexical alignment and person-centering instead.</h3>
+            <p>
+            Individuals can mirror the language as a way of decreasing social
+            distance which can increase trust. This alignment, as well as the
+            usage of second person to center the story on the distressed
+            individual, are positively correlated with good condolences.
+            </p>
+
+            <h3>What else?</h3>
+            <p>
+            How did we measure "good" condolences? How do we effectively
+            express distress to receive social support? How do we detect
+            empathy? All of these questions, and more, are answered in the
+            paper!
+            </p>
+        </section>
+
+        <section>
+            <h2>Citing</h2>
+            <pre>
+@inproceedings{zhou2020condolence,
+           title={Condolence and Empathy in Online Communities},
+           author={Zhou, Naitian and Jurgens, David},
+           booktitle={Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+           year={2020}
+}
+            </pre>
+        </section>
+        </article>
+    </body>
+</html>
