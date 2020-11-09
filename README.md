@@ -1,7 +1,8 @@
 # Condolence and Empathy in Online Communities
 
-Github repository for EMNLP 2020 paper Condolence and Empathy in Online
-Communities by Naitian Zhou and David Jurgens.
+Github repository for EMNLP 2020 paper [Condolence and Empathy in Online
+Communities](https://www.aclweb.org/anthology/2020.emnlp-main.45.pdf) by
+[Naitian Zhou](https://naitian.org) and [David Jurgens](https://jurgens.people.si.umich.edu/).
 
 ## Data
 
